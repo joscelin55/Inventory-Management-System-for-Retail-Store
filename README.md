@@ -6,7 +6,7 @@ List of the implemented functionalities:
    - A 'Product' class is created to represent individual products.
    - Each product has attributes: a unique product identifier, name, category, price, and quantity in stock.
    
-2. Inventory class:
+3. Inventory class:
   - A 'Inventory' class is implemented to manage the store's inventory.
   - It provides methods for adding products to the inventory, updating stock levels, and retrieving product information
    
