@@ -1,10 +1,10 @@
 class Product:
     def __init__(self, product_id, name, category, price, quantity):
-        self.product_id = product_id
-        self.name = name
-        self.category = category
-        self.price = price
-        self.quantity = quantity
+        self.product_id = product_id #unique identifier for the product 
+        self.name = name #name of the product
+        self.category = category #category of the product
+        self.price = price #price of the product
+        self.quantity = quantity #quantity of the product in stock 
 
 class Inventory:
     def __init__(self):
@@ -71,6 +71,7 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == '1':
+        #if statement that allows user to add new product to the inventory 
         product_id = int(input("Enter Product ID: "))
         name = input("Enter Product Name: ")
         category = input("Enter Product Category: ")
@@ -82,6 +83,7 @@ while True:
         print("Product added to inventory.")
 
     elif choice == '2':
+        #elif that records a sales transaction
         transaction = Transaction()
         while True:
             product_id = int(input("Enter Product ID to sell (0 to finish): "))
@@ -98,15 +100,17 @@ while True:
         print("Sale recorded.")
 
     elif choice == '3':
+        #this generates and displays the stock report
         report_generator = ReportGenerator()
         report_generator.generate_stock_report(inventory)
 
     elif choice == '4':
+         #this generates and displays the sales report
         report_generator = ReportGenerator()
         report_generator.generate_sales_report(transactions)
 
     elif choice == '5':
-        break
+        break  #this exits the program 
 
     else:
         print("Invalid choice. Please select a valid option.")
